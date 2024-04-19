@@ -1,0 +1,17 @@
+{
+  "item.tutorialmod.heart_of_greed": "Heart of Greed",
+  "item.tutorialmod.phoenix_feather": "Phoenix Feather",
+  "item.tutorialmod.alloy_casing": "Alloy Casing",
+  "item.tutorialmod.netherite_plate": "Netherite Plate",
+  "item.tutorialmod.gilded_midas_crown": "Gilded Midas Crown",
+  "item.tutorialmod.gilded_midas_chestplate": "Gilded Midas Chestplate",
+  "item.tutorialmod.gilded_midas_leggings": "Gilded Midas Leggings",
+  "item.tutorialmod.gilded_midas_boots": "Gilded Midas Boots",
+  "item.tutorialmod.phoenix_forged_steel": "Phoenix Forged Steel",
+  "item.tutorialmod.phoenix_forged_sword": "Phoenix Forged Sword",
+
+  "block.tutorialmod.cursed_dirt_block": "Cursed Dirt Block",
+  "block.tutorialmod.infernal_forge": "Infernal Forge",
+
+  "creativetab.tutorial_tab": "Golden Greed Tab"
+}
