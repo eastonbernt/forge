@@ -21,6 +21,7 @@ public class InfernalForgeScreen extends AbstractContainerScreen<InfernalForgeMe
     @Override
     protected void init() {
         super.init();
+
     }
 
     @Override
@@ -31,14 +32,14 @@ public class InfernalForgeScreen extends AbstractContainerScreen<InfernalForgeMe
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
-        guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+        guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth = 243, imageHeight = 244);
 
         renderProgressArrow(guiGraphics, x, y);
     }
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 90, y + 41, 176, 0, 44, menu.getScaledProgress());
+            guiGraphics.blit(TEXTURE, x + 90, y + 200, 176, 0, 8, menu.getScaledProgress());
         }
     }
 
