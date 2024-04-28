@@ -33,19 +33,19 @@ public class InfernalForgeMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 29, 16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 47, 16));
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 65, 16));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 29+1, 16+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 47+1, 16+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 65+1, 16+1));
 
-            this.addSlot(new SlotItemHandler(iItemHandler, 3, 29, 34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 4, 47, 34));
-            this.addSlot(new SlotItemHandler(iItemHandler, 5, 65, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 29+1, 34+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 47+1, 34+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 65+1, 34+1));
 
-            this.addSlot(new SlotItemHandler(iItemHandler, 6, 29, 52));
-            this.addSlot(new SlotItemHandler(iItemHandler, 7, 47, 52));
-            this.addSlot(new SlotItemHandler(iItemHandler, 8, 65, 52));
+            this.addSlot(new SlotItemHandler(iItemHandler, 6, 29+1, 52+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 7, 47+1, 52+1));
+            this.addSlot(new SlotItemHandler(iItemHandler, 8, 65+1, 52+1));
 
-            this.addSlot(new SlotItemHandler(iItemHandler, 9, 122, 34));
+            this.addSlot(new SlotItemHandler(iItemHandler, 9, 122+2, 34+2));
         });
 
         addDataSlots(data);

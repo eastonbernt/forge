@@ -20,7 +20,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CURSED_DIRT_BLOCK.get());
                         output.accept(ModItems.PHOENIX_FEATHER.get());
+                        output.accept(ModItems.PHOENIX_GEM.get());
                         output.accept(ModItems.NETHERITE_PLATE.get());
+                        output.accept(ModItems.CRUSHED_PHOENIX_POWDER.get());
                         output.accept(ModItems.ALLOY_CASING.get());
                         output.accept(ModItems.HEART_OF_GREED.get());
                         output.accept(ModItems.GILDED_MIDAS_CROWN.get());
@@ -30,6 +32,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PHOENIX_FORGED_STEEL.get());
                         output.accept(ModItems.PHOENIX_FORGED_SWORD.get());
                         output.accept(ModBlocks.INFERNAL_FORGE.get());
+                        output.accept(ModItems.PHOENIX_FORGED_HELMET.get());
 
 
 

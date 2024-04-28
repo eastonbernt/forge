@@ -17,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -32,6 +31,39 @@ public class InfernalForgeBlockEntity extends BlockEntity implements MenuProvide
 
     //private static final int INPUT_SLOT = 8;
     private static final int OUTPUT_SLOT = 9;
+
+    private infernal_forge_recipe gilded_midas_boots_recipe = new infernal_forge_recipe(
+            new Item[][] {
+                    { ItemStack.EMPTY.getItem(),     ItemStack.EMPTY.getItem(), ItemStack.EMPTY.getItem() },
+                    { ModItems.HEART_OF_GREED.get(), ItemStack.EMPTY.getItem(), ModItems.HEART_OF_GREED.get() },
+                    { ModItems.HEART_OF_GREED.get(), ItemStack.EMPTY.getItem(), ModItems.HEART_OF_GREED.get() }
+            },
+            ModItems.GILDED_MIDAS_BOOTS.get()
+    );
+
+    private infernal_forge_recipe gilded_midas_leggings_recipe = new infernal_forge_recipe(
+            new Item[][] {
+                    { ModItems.HEART_OF_GREED.get(), ModItems.HEART_OF_GREED.get(), ModItems.HEART_OF_GREED.get() },
+                    { ModItems.HEART_OF_GREED.get(), ItemStack.EMPTY.getItem(),     ModItems.HEART_OF_GREED.get() },
+                    { ModItems.HEART_OF_GREED.get(), ItemStack.EMPTY.getItem(),     ModItems.HEART_OF_GREED.get() }
+            },
+            ModItems.GILDED_MIDAS_LEGGINGS.get()
+    );
+
+    private infernal_forge_recipe gilded_midas_chest_recipe = new infernal_forge_recipe(
+            new Item[][] {
+                    { ModItems.HEART_OF_GREED.get(), ItemStack.EMPTY.getItem(), ModItems.HEART_OF_GREED.get() },
+                    { ModItems.HEART_OF_GREED.get(), ModItems.HEART_OF_GREED.get(),     ModItems.HEART_OF_GREED.get() },
+                    { ModItems.HEART_OF_GREED.get(), ModItems.HEART_OF_GREED.get(),     ModItems.HEART_OF_GREED.get() }
+            },
+            ModItems.GILDED_MIDAS_CHESTPLATE.get()
+    );
+
+    private infernal_forge_recipe[] recipes = new infernal_forge_recipe[] {
+            gilded_midas_boots_recipe,
+            gilded_midas_leggings_recipe,
+            gilded_midas_chest_recipe
+    };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -140,17 +172,12 @@ public class InfernalForgeBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.HEART_OF_GREED.get(), 1);
-
-        for(int i=0;i<9;i++) {
-            if (this.itemHandler.getStackInSlot(i).getItem() == ModItems.PHOENIX_FEATHER.get()) {
-                this.itemHandler.extractItem(i, 1, false);
-                break;
+        for (infernal_forge_recipe recipe : recipes) {
+            if (recipe.can_craft(this.itemHandler)) {
+                recipe.craft(this.itemHandler);
+                return;
             }
         }
-
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasProgressFinished() {
@@ -162,23 +189,12 @@ public class InfernalForgeBlockEntity extends BlockEntity implements MenuProvide
     }
 
     private boolean hasRecipe() {
-        //boolean hasCraftingItem = this.itemHandler.getStackInSlot(INPUT_SLOT).getItem() == ModItems.PHOENIX_FEATHER.get();
-
-        boolean phoenix_feather_found = false;
-        boolean invalid_recipe = false;
-
-        for(int i=0; i<9; i++) {
-            if(this.itemHandler.getStackInSlot(i).getItem() == ModItems.PHOENIX_FEATHER.get()) {
-                phoenix_feather_found = true;
-            } else if(!this.itemHandler.getStackInSlot(i).isEmpty()) {
-                invalid_recipe = true;
-                break;
+        for (infernal_forge_recipe recipe : recipes) {
+            if (recipe.can_craft(this.itemHandler)) {
+                return true;
             }
         }
-
-        ItemStack result = new ItemStack(ModItems.HEART_OF_GREED.get());
-
-        return phoenix_feather_found && !invalid_recipe && canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
+        return false;
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
