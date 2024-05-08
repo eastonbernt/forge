@@ -1,5 +1,7 @@
 {
-  "value": [
+  "values": [
+    "tutorialmod:neutralite_ore",
+    "tutorialmod:infernal_forge"
 
   ]
 }

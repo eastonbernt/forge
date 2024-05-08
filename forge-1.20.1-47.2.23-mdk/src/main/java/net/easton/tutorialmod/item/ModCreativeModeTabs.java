@@ -19,10 +19,14 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CURSED_DIRT_BLOCK.get());
+                        output.accept(ModBlocks.MOLETEN_LANTERN.get());
+                        output.accept(ModBlocks.SAND_BRICK.get());
+                        output.accept(ModBlocks.SAND_BRICK_FIXTURE.get());
                         output.accept(ModItems.PHOENIX_FEATHER.get());
                         output.accept(ModItems.PHOENIX_GEM.get());
                         output.accept(ModItems.NETHERITE_PLATE.get());
                         output.accept(ModItems.CRUSHED_PHOENIX_POWDER.get());
+                        output.accept(ModItems.PHOENIX_POWDER_BALL.get());
                         output.accept(ModItems.ALLOY_CASING.get());
                         output.accept(ModItems.HEART_OF_GREED.get());
                         output.accept(ModItems.GILDED_MIDAS_CROWN.get());
@@ -33,6 +37,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PHOENIX_FORGED_SWORD.get());
                         output.accept(ModBlocks.INFERNAL_FORGE.get());
                         output.accept(ModItems.PHOENIX_FORGED_HELMET.get());
+                        output.accept(ModItems.PHOENIX_FORGED_CHESTPLATE.get());
+                        output.accept(ModItems.PHOENIX_FORGED_LEGGINGS.get());
+                        output.accept(ModItems.PHOENIX_FORGED_BOOTS.get());
+                        output.accept(ModBlocks.NEUTRALITE_ORE.get());
+                        output.accept(ModItems.NEUTRALITE_STONE.get());
+                        output.accept(ModItems.NEUTRALITE_FRAGMENT.get());
+                        output.accept(ModItems.RA_SPEAR.get());
+
+
 
 
 

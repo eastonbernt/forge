@@ -18,6 +18,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         blockWithItem(ModBlocks.CURSED_DIRT_BLOCK);
+        blockWithItem(ModBlocks.NEUTRALITE_ORE);
 
         simpleBlockWithItem(ModBlocks.INFERNAL_FORGE.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/infernal_forge")));

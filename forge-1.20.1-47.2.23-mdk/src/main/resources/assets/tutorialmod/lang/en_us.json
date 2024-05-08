@@ -1,5 +1,6 @@
 {
   "item.tutorialmod.heart_of_greed": "Heart of Greed",
+  "item.tutorialmod.ra_spear": "Ra's Spear",
   "item.tutorialmod.phoenix_feather": "Phoenix Feather",
   "item.tutorialmod.alloy_casing": "Alloy Casing",
   "item.tutorialmod.netherite_plate": "Netherite Plate",
@@ -10,11 +11,21 @@
   "item.tutorialmod.phoenix_forged_steel": "Phoenix Forged Steel",
   "item.tutorialmod.phoenix_forged_sword": "Phoenix Forged Sword",
   "item.tutorialmod.crushed_phoenix_powder": "Crushed Phoenix Powder",
+  "item.tutorialmod.phoenix_powder_ball": "Phoenix Powder Ball",
+  "item.tutorialmod.neutralite_stone": "Neutralite Stone",
+  "item.tutorialmod.neutralite_fragment": "Neutralite Fragment",
   "item.tutorialmod.phoenix_gem": "Phoenix Gem",
   "item.tutorialmod.phoenix_forged_helmet": "Phoenix Forged Helmet",
+  "item.tutorialmod.phoenix_forged_chestplate": "Phoenix Forged Chestplate",
+  "item.tutorialmod.phoenix_forged_leggings": "Phoenix Forged Leggings",
+  "item.tutorialmod.phoenix_forged_boots": "Phoenix Forged Boots",
 
 
   "block.tutorialmod.cursed_dirt_block": "Cursed Dirt Block",
+  "block.tutorialmod.molten_lantern": "Molten Lantern",
+  "block.tutorialmod.sand_brick": "Sand Brick",
+  "block.tutorialmod.sand_brick_fixture": "Sand Brick Fixture",
+  "block.tutorialmod.neutralite_ore": "Neutralite Ore",
   "block.tutorialmod.infernal_forge": "Infernal Forge",
 
   "creativetab.tutorial_tab": "Golden Greed Tab"

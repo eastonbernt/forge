@@ -3,12 +3,10 @@ package net.easton.tutorialmod.block;
 import net.easton.tutorialmod.TutorialMod;
 import net.easton.tutorialmod.block.custom.InfernalForgeBlock;
 import net.easton.tutorialmod.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.GrassBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,7 +20,25 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> CURSED_DIRT_BLOCK = registerBlock("cursed_dirt_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).sound(SoundType.NETHER_GOLD_ORE)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).sound(SoundType.ROOTED_DIRT)));
+
+    public static final RegistryObject<Block> MOLETEN_LANTERN = registerBlock("molten_lantern",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)));
+
+ public static final RegistryObject<Block> SAND_BRICK = registerBlock("sand_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+public static final RegistryObject<Block> SAND_BRICK_FIXTURE = registerBlock("sand_brick_fixture",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)));
+
+
+    public static final RegistryObject<Block> NEUTRALITE_ORE = registerBlock("neutralite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
+
+
+
+
+
 
     public static final RegistryObject<Block> INFERNAL_FORGE = registerBlock("infernal_forge",
             () -> new InfernalForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));

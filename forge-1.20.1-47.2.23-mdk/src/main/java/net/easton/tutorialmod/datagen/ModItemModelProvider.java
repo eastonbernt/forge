@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.NETHERITE_PLATE);
         simpleItem(ModItems.ALLOY_CASING);
         simpleItem(ModItems.PHOENIX_FORGED_STEEL);
+        simpleItem(ModItems.PHOENIX_FORGED_STEEL);
         handheldItem(ModItems.PHOENIX_FORGED_SWORD);
 
 

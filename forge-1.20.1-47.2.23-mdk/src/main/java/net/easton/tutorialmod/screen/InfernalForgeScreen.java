@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class InfernalForgeScreen extends AbstractContainerScreen<InfernalForgeMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(TutorialMod.MOD_ID, "textures/gui/crafting_table.png");
+            new ResourceLocation(TutorialMod.MOD_ID, "textures/gui/infernal_forge_gui.png");
     public static final int GUI_WIDTH = 256;
     public static final int GUI_HEIGHT = 256;
 

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/sandstone",
+    "east": "tutorialmod:block/sand_brick_fixture_texture_side",
+    "north": "tutorialmod:block/sand_brick_fixture_texture_side",
+    "particle": "tutorialmod:block/sand_brick_fixture_texture_side",
+    "south": "tutorialmod:block/sand_brick_fixture_texture_side",
+    "up": "tutorialmod:block/sand_brick_fixture_texture_top",
+    "west": "tutorialmod:block/sand_brick_fixture_texture_side"
+  }
+}
