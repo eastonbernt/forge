@@ -3,10 +3,12 @@ package net.easton.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.easton.tutorialmod.block.ModBlocks;
 import net.easton.tutorialmod.block.entity.ModBlockEntities;
+import net.easton.tutorialmod.entity.ModEntities;
 import net.easton.tutorialmod.item.ModCreativeModeTabs;
 import net.easton.tutorialmod.item.ModItems;
 import net.easton.tutorialmod.screen.InfernalForgeScreen;
 import net.easton.tutorialmod.screen.ModMenuTypes;
+import net.easton.tutorialmod.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +26,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import net.easton.tutorialmod.entity.client.PhoenixChickenRenderer;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
@@ -45,6 +48,9 @@ public class TutorialMod
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -81,6 +87,7 @@ public class TutorialMod
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.PHOENIXCHICKEN.get(), PhoenixChickenRenderer::new);
 
             MenuScreens.register(ModMenuTypes.INFERNAL_MENU.get(), InfernalForgeScreen::new);
         }

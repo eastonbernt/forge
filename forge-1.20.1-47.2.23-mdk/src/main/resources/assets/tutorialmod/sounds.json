@@ -1,0 +1,8 @@
+{
+  "resurrection_sound": {
+    "subtitles": "sounds.tutorialmod.resurrection_sound",
+    "sounds": [
+      "tutorialmod:resurrection_sound"
+    ]
+  }
+}

@@ -44,6 +44,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NEUTRALITE_STONE.get());
                         output.accept(ModItems.NEUTRALITE_FRAGMENT.get());
                         output.accept(ModItems.RA_SPEAR.get());
+                        output.accept(ModItems.PHOENIXCHICKEN_SPAWN_EGG.get());
 
 
 

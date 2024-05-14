@@ -1,6 +1,18 @@
 {
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "tutorialmod:item/ra_spear"
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tutorialmod:item/ra_spear_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tutorialmod:item/ra_spear_2d"
+    },
+    "ground": {
+      "parent": "tutorialmod:item/ra_spear_2d"
+    },
+    "fixed": {
+      "parent": "tutorialmod:item/ra_spear_2d"
+    }
   }
 }

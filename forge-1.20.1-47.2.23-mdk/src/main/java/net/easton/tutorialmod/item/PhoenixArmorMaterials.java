@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum PhoenixArmorMaterials implements ArmorMaterial {
-    PHOENIX_FORGED_STEEL("phoenix_forged_steel", 26, new int[]{ 5, 10, 7, 5}, 25, SoundEvents.ARMOR_EQUIP_NETHERITE,
+    PHOENIX_FORGED_STEEL("phoenix_forged_steel", 26, new int[]{ 3, 6, 5, 3}, 25, SoundEvents.ARMOR_EQUIP_NETHERITE,
             1f, 0f, () -> Ingredient.of(ModItems.PHOENIX_FORGED_STEEL.get()));
 
     private final String name;

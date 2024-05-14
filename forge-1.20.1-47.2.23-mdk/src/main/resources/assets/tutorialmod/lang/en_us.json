@@ -19,6 +19,7 @@
   "item.tutorialmod.phoenix_forged_chestplate": "Phoenix Forged Chestplate",
   "item.tutorialmod.phoenix_forged_leggings": "Phoenix Forged Leggings",
   "item.tutorialmod.phoenix_forged_boots": "Phoenix Forged Boots",
+  "item.tutorialmod.phoenixchicken_spawn_egg": "Phoenix Chicken Spawn Egg",
 
 
   "block.tutorialmod.cursed_dirt_block": "Cursed Dirt Block",
@@ -27,6 +28,8 @@
   "block.tutorialmod.sand_brick_fixture": "Sand Brick Fixture",
   "block.tutorialmod.neutralite_ore": "Neutralite Ore",
   "block.tutorialmod.infernal_forge": "Infernal Forge",
+
+  "sounds.tutorialmod.resurrection_sound": "Phoenix Resurrects Player",
 
   "creativetab.tutorial_tab": "Golden Greed Tab"
 }
